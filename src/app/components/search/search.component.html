@@ -1,1 +1,13 @@
-<p>search works!</p>
+<div>
+    <form
+        (ngSubmit)="onFetchWeather()"
+        [formGroup]="cityForm"
+    >
+        <input
+            type="text"
+            formControlName="city"
+            placeholder="Enter city name"
+        >
+        <button type="submit">Get Weather</button>
+    </form>
+</div>
