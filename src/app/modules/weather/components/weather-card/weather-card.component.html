@@ -22,14 +22,14 @@
                 class="me-1"
                 src="assets/svg/water.svg"
             ></svg-icon>
-            Humidity {{ data.humidity }}%
+            {{ 'WEATHER.HUMIDITY' | translate }} {{ data.humidity }}%
         </div>
         <div class="flex items-center">
             <svg-icon
                 class="me-1"
                 src="assets/svg/temperature.svg"
             ></svg-icon>
-            Feels like {{ data.feelsLike }}°C
+            {{ 'WEATHER.FEELS_LIKE' | translate }} {{ data.feelsLike }}°C
         </div>
     </div>
 
