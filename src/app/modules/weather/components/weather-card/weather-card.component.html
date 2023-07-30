@@ -1,27 +1,36 @@
-<div class="rounded-[48px] bg-opacity-20 bg-black backdrop-blur-lg text-center">
-    <div class="flex items-center">
+<div class="rounded-[40px] bg-opacity-20 bg-black backdrop-blur-lg py-11 px-7 flex flex-col items-center">
+    <div class="mb-3">
+        <p class="relative w-fit">
+            <span class="text-9xl font-light">{{ mockD.temperature }}</span>
+            <span class="text-2xl absolute -top-2 -right-3">°C</span>
+        </p>
+    </div>
+	<div class="flex mb-8 items-center">
         <img
-            src="https://openweathermap.org/img/wn/{{ mockD.icon }}@2x.png"
-            alt
+            class="w-24 h-24 object-contain object-center me-4"
+            src="assets/icons/{{ mockD.icon }}.png"
+            alt="weather"
         >
         <div>
-            <h2 class="text-3xl">{{ mockD.city }}</h2>
+            <h2 class="text-4xl mb-2">{{ mockD.city }}</h2>
+            <p class="text-lg">{{ mockD.weatherDescription }}</p>
         </div>
     </div>
-    <div class="pb-9">
-        <p class="mb-3">
-            <span class="text-9xl font-light">{{ mockD.temperature }}</span>
-            <span class="text-2xl">°C</span>
-        </p>
-        <p>{{ mockD.weatherDescription }}</p>
+    <div class="details grid grid-cols-2 gap-5 relative">
+        <div class="flex items-center">
+            <svg-icon
+                class="me-1"
+                src="assets/svg/water.svg"
+            ></svg-icon>
+            Humidity {{ mockD.humidity }}%
+        </div>
+        <div class="flex items-center">
+            <svg-icon
+                class="me-1"
+                src="assets/svg/temperature.svg"
+            ></svg-icon>
+            Feels like {{ mockD.humidity }}°C
+        </div>
     </div>
-	<div class="grid grid-cols-2 gap-5 pb-11 px-7">
-		<div class="flex items-center">
-			<svg-icon class="me-1" src="assets/svg/water.svg"></svg-icon> Humidity {{ mockD.humidity }}%
-		</div>
-		<div class="flex items-center">
-			<svg-icon class="me-1" src="assets/svg/temperature.svg"></svg-icon> Feels like {{ mockD.humidity }}°C
-		</div>
-	</div>
 
 </div>
