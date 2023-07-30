@@ -1,0 +1,11 @@
+<div *ngIf="loading$ | async">Loading...</div>
+<div *ngIf="error$ | async as error">{{ error }}</div>
+<div *ngIf="weatherData$ | async as weatherData">
+    <h2>Weather for {{ weatherData.city }}</h2>
+    <p>
+        Temperature: {{ weatherData.temperature }}°C
+    </p>
+    <p>
+        Weather Description: {{ weatherData.weatherDescription }}
+    </p>
+</div>
