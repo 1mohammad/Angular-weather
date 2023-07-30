@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { onlineStatusReducer } from './store/online-status/online-status.reducer';
 import { weatherReducer } from './store/weather/weather.reducer';
 import { WeatherEffects } from './store/weather/weather.effects';
+import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 
 export function createTranslateLoader(http: HttpClient) {
 	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -26,6 +27,7 @@ export function createTranslateLoader(http: HttpClient) {
 		AppComponent,
 		HeaderComponent,
 		SearchComponent,
+  		MainLayoutComponent,
 	],
 	imports: [
 		BrowserModule,
