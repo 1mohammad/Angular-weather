@@ -8,12 +8,4 @@ import { WeatherData } from '@models/weather-data.model';
 })
 export class WeatherCardComponent {
 	@Input() data!: WeatherData;
-
-	mockD = {
-		icon: '01d',
-		city: 'Shiraz',
-		humidity: 10,
-		temperature: 20,
-		weatherDescription: 'cold'
-	}
 }
