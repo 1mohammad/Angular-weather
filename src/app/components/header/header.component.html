@@ -1,6 +1,20 @@
-<p class="text-center bg-red-300 py-2 " [@slideInOut] *ngIf="!(isOnline$ | async)">
+<p class="text-center bg-red-400 py-2 " [@slideInOut] *ngIf="!(isOnline$ | async)">
 	{{ 'HEADER.OFFLINE_MESSAGE' | translate }}
 </p>
 <header>
-	{{ 'HEADER.TITLE' | translate }}
+	<div class="flex pt-4 pb-5 px-5 bg-white bg-opacity-20 justify-between">
+		<div class="flex items-end">
+			<img class="me-3" src="assets/img/logo.png" alt="Weather app">
+			<span class="font-bold text-3xl">
+				{{ 'HEADER.TITLE' | translate }}
+			</span>
+		</div>
+		<ul class="flex items-center">
+			<li>
+				<a class="rounded px-2 py-1 bg-white bg-opacity-0 hover:bg-opacity-10 transition-all" href="https://github.com/1mohammad/Angular-weather" target="_blank" rel="noopener noreferrer">
+					{{ 'HEADER.MENU.GITHUB' | translate }}
+				</a>
+			</li>
+		</ul>
+	</div>
 </header>

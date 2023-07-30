@@ -1,13 +1,15 @@
-<div>
+<div class="flex justify-center">
     <form
+		class="rounded-md overflow-hidden border border-white md:w-[450px] w-full mx-4 flex items-center"
         (ngSubmit)="onFetchWeather()"
         [formGroup]="cityForm"
     >
         <input
+			class="bg-transparent py-2 px-3 outline-none flex-1"
             type="text"
             formControlName="city"
             placeholder="Enter city name"
         >
-        <button type="submit">Get Weather</button>
+        <button class="px-3 border-l h-full hover:bg-opacity-100 hover:text-black bg-white bg-opacity-0 transition-all" type="submit">Search</button>
     </form>
 </div>

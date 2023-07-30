@@ -38,10 +38,11 @@ export class WeatherService {
 	private extractWeatherData(response: any): WeatherData {
 		return {
 			city: response.name,
-			temperature: response.main.temp,
+			temperature: Math.round(response.main.temp),
 			weatherDescription: response.weather[0].description,
 			icon: response.weather[0].icon,
-			humidity: response.main.humidity
+			humidity: response.main.humidity,
+			feelsLike: Math.round(response.main.feels_like)
 		};
 	}
 }
