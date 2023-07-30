@@ -4,4 +4,5 @@ export interface WeatherData {
 	weatherDescription: string;
 	icon:string;
 	humidity: number;
+	feelsLike: number
 }

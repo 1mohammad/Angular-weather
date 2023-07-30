@@ -9,5 +9,9 @@
 	"FOOTER": {
 		"COPYRIGHT": "Made with",
 		"DEVELOPER": "By Mohammad Karimi"
+	},
+	"WEATHER": {
+		"HUMIDITY": "Humidity",
+		"FEELS_LIKE": "Feels like"
 	}
 }
