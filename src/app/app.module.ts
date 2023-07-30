@@ -17,6 +17,7 @@ import { onlineStatusReducer } from './store/online-status/online-status.reducer
 import { weatherReducer } from './store/weather/weather.reducer';
 import { WeatherEffects } from './store/weather/weather.effects';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 export function createTranslateLoader(http: HttpClient) {
 	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -28,6 +29,7 @@ export function createTranslateLoader(http: HttpClient) {
 		HeaderComponent,
 		SearchComponent,
   		MainLayoutComponent,
+    FooterComponent,
 	],
 	imports: [
 		BrowserModule,
