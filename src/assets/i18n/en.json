@@ -1,7 +1,10 @@
 {
 	"HEADER": {
 		"OFFLINE_MESSAGE": "You are offline. (offline data is available)",
-		"TITLE": "Forecast"
+		"TITLE": "Weather",
+		"MENU": {
+			"GITHUB": "Github"
+		}
 	},
 	"FOOTER": {
 		"COPYRIGHT": "Made with",
