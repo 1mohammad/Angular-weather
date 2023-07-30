@@ -13,7 +13,6 @@ import { SearchComponent } from './components/search/search.component';
 import { weatherReducer } from './store/weather.reducer';
 import { WeatherEffects } from './store/weather.effects';
 import { EffectsModule } from '@ngrx/effects';
-import { WeatherComponent } from './components/weather/weather.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 export function createTranslateLoader(http: HttpClient) {
@@ -25,14 +24,13 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
 	HeaderComponent,
 	SearchComponent,
- WeatherComponent
   ],
   imports: [
     BrowserModule,
 	FormsModule,
+    AppRoutingModule,
 	HttpClientModule,
 	ReactiveFormsModule,
-    AppRoutingModule,
 	TranslateModule.forRoot(
 		{
             loader: {
