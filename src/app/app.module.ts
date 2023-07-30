@@ -18,6 +18,7 @@ import { weatherReducer } from './store/weather/weather.reducer';
 import { WeatherEffects } from './store/weather/weather.effects';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 export function createTranslateLoader(http: HttpClient) {
 	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -28,8 +29,8 @@ export function createTranslateLoader(http: HttpClient) {
 		AppComponent,
 		HeaderComponent,
 		SearchComponent,
-  		MainLayoutComponent,
-    FooterComponent,
+		MainLayoutComponent,
+		FooterComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -50,7 +51,8 @@ export function createTranslateLoader(http: HttpClient) {
 		),
 		StoreModule.forRoot({ weather: weatherReducer, onlineStatus: onlineStatusReducer }),
 		EffectsModule.forRoot([WeatherEffects]),
-		
+		AngularSvgIconModule.forRoot()
+
 	],
 	providers: [],
 	bootstrap: [AppComponent]
