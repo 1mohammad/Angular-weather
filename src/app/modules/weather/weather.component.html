@@ -1,6 +1,7 @@
 <div *ngIf="loading$ | async">Loading...</div>
-<div *ngIf="error$ | async as error">{{ error }}</div>
+<div *ngIf="error$ | async as error">{{ error.error.message }}</div>
 <div *ngIf="weatherData$ | async as weatherData">
+	<img src="https://openweathermap.org/img/wn/{{ weatherData.icon }}@4x.png" alt="">
     <h2>Weather for {{ weatherData.city }}</h2>
     <p>
         Temperature: {{ weatherData.temperature }}°C

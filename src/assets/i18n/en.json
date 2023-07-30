@@ -1,0 +1,10 @@
+{
+	"HEADER": {
+		"OFFLINE_MESSAGE": "You are offline. (offline data is available)",
+		"TITLE": "Forecast"
+	},
+	"FOOTER": {
+		"COPYRIGHT": "Made with",
+		"DEVELOPER": "By Mohammad Karimi"
+	}
+}

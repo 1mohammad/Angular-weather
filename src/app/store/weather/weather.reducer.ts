@@ -1,12 +1,6 @@
-import { createFeatureSelector, createReducer, createSelector, on } from '@ngrx/store';
-import { WeatherData } from '../models/weather-data.model';
+import { createReducer,on } from '@ngrx/store';
+import { WeatherData } from '@models/weather-data.model';
 import * as WeatherActions from './weather.actions';
-
-const selectWeatherState = createFeatureSelector<WeatherState>('weather');
-
-export const selectWeatherData = createSelector(selectWeatherState, (state) => state.data);
-export const selectWeatherLoading = createSelector(selectWeatherState, (state) => state.loading);
-export const selectWeatherError = createSelector(selectWeatherState, (state) => state.error);
 
 export interface WeatherState {
   data: WeatherData | null;

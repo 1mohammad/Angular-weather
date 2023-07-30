@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { WeatherState, selectWeatherData, selectWeatherLoading, selectWeatherError } from '../../store/weather.reducer';
+import { selectWeatherData, selectWeatherLoading, selectWeatherError } from '@store/weather/weather.selectors';
+import { WeatherData } from '@models/weather-data.model';
 
 @Component({
 	selector: 'app-weather',
@@ -9,11 +10,11 @@ import { WeatherState, selectWeatherData, selectWeatherLoading, selectWeatherErr
 	styleUrls: ['./weather.component.scss'],
 })
 export class WeatherComponent {
-  weatherData$: Observable<any>;
+  weatherData$: Observable<WeatherData | null>;
   loading$: Observable<boolean>;
   error$: Observable<any>;
 
-  constructor(private store: Store<WeatherState>) {
+  constructor(private store: Store) {
     this.weatherData$ = this.store.select(selectWeatherData);
     this.loading$ = this.store.select(selectWeatherLoading);
     this.error$ = this.store.select(selectWeatherError);
