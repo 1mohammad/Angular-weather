@@ -1,1 +1,6 @@
-<p>header works!</p>
+<p class="text-center bg-red-300 py-2 " [@slideInOut] *ngIf="!(isOnline$ | async)">
+	{{ 'header.offline-message' | translate }}
+</p>
+<header>
+	{{ 'header.title' | translate }}
+</header>

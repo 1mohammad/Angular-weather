@@ -3,7 +3,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { SearchComponent } from './search.component';
-import { fetchWeather } from 'src/app/store/weather.actions';
+import { fetchWeather } from '@store/weather/weather.actions';
 
 describe('SearchComponent', () => {
   let component: SearchComponent;
