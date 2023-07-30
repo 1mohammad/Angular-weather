@@ -17,8 +17,8 @@ export class AppComponent {
 	private store: Store<{ onlineStatus: { isOnline: boolean } }>,
 	private translate: TranslateService
 	) {
-		translate.setDefaultLang('en');
-		translate.use('en');
+		this.translate.setDefaultLang('en');
+		this.translate.use('en');
 	}
 
   ngOnInit() {
