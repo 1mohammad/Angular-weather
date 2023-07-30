@@ -1,19 +1,19 @@
 <div class="rounded-[40px] bg-opacity-20 bg-black backdrop-blur-lg py-11 px-7 flex flex-col items-center">
     <div class="mb-3">
         <p class="relative w-fit">
-            <span class="text-9xl font-light">{{ mockD.temperature }}</span>
+            <span class="text-9xl font-light">{{ data.temperature }}</span>
             <span class="text-2xl absolute -top-2 -right-3">°C</span>
         </p>
     </div>
 	<div class="flex mb-8 items-center">
         <img
             class="w-24 h-24 object-contain object-center me-4"
-            src="assets/icons/{{ mockD.icon }}.png"
+            src="assets/icons/{{ data.icon }}.png"
             alt="weather"
         >
         <div>
-            <h2 class="text-4xl mb-2">{{ mockD.city }}</h2>
-            <p class="text-lg">{{ mockD.weatherDescription }}</p>
+            <h2 class="text-4xl mb-2">{{ data.city }}</h2>
+            <p class="text-lg">{{ data.weatherDescription }}</p>
         </div>
     </div>
     <div class="details grid grid-cols-2 gap-5 relative">
@@ -22,14 +22,14 @@
                 class="me-1"
                 src="assets/svg/water.svg"
             ></svg-icon>
-            Humidity {{ mockD.humidity }}%
+            Humidity {{ data.humidity }}%
         </div>
         <div class="flex items-center">
             <svg-icon
                 class="me-1"
                 src="assets/svg/temperature.svg"
             ></svg-icon>
-            Feels like {{ mockD.humidity }}°C
+            Feels like {{ data.humidity }}°C
         </div>
     </div>
 
