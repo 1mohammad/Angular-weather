@@ -41,7 +41,8 @@ export class WeatherService {
 			temperature: Math.round(response.main.temp),
 			weatherDescription: response.weather[0].description,
 			icon: response.weather[0].icon,
-			humidity: response.main.humidity
+			humidity: response.main.humidity,
+			feelsLike: Math.round(response.main.feels_like)
 		};
 	}
 }

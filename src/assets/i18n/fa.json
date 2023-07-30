@@ -9,5 +9,9 @@
 	"FOOTER": {
 		"COPYRIGHT": "ساخته شده با",
 		"DEVELOPER": "توسط محمد کریمی"
+	},
+	"WEATHER": {
+		"HUMIDITY": "رطوبت",
+		"FEELS_LIKE": "Feels like"
 	}
 }
