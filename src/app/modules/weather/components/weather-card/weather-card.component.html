@@ -1,0 +1,27 @@
+<div class="rounded-[48px] bg-opacity-20 bg-black backdrop-blur-lg text-center">
+    <div class="flex items-center">
+        <img
+            src="https://openweathermap.org/img/wn/{{ mockD.icon }}@2x.png"
+            alt
+        >
+        <div>
+            <h2 class="text-3xl">{{ mockD.city }}</h2>
+        </div>
+    </div>
+    <div class="pb-9">
+        <p class="mb-3">
+            <span class="text-9xl font-light">{{ mockD.temperature }}</span>
+            <span class="text-2xl">°C</span>
+        </p>
+        <p>{{ mockD.weatherDescription }}</p>
+    </div>
+	<div class="grid grid-cols-2 gap-5 pb-11 px-7">
+		<div class="flex items-center">
+			<svg-icon class="me-1" src="assets/svg/water.svg"></svg-icon> Humidity {{ mockD.humidity }}%
+		</div>
+		<div class="flex items-center">
+			<svg-icon class="me-1" src="assets/svg/temperature.svg"></svg-icon> Feels like {{ mockD.humidity }}°C
+		</div>
+	</div>
+
+</div>
