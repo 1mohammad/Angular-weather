@@ -5,11 +5,13 @@ import { WeatherRoutingModule } from './weather-routing.module';
 import { WeatherCardComponent } from './components/weather-card/weather-card.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { TranslateModule } from '@ngx-translate/core';
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
 	WeatherComponent,
- WeatherCardComponent
+ WeatherCardComponent,
+ ErrorComponent
   ],
   imports: [
     CommonModule,

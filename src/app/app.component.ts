@@ -29,10 +29,21 @@ export class AppComponent {
 		this.updateOnlineStatus();
 	});
     this.updateOnlineStatus();
+	this.translate.onLangChange.subscribe({
+		next: (selectedLang:{lang:string,translations: any}) => {
+			this.updateDirection(selectedLang.lang);
+		}
+	})
   }
 
   updateOnlineStatus(): void {
     const isOnline = navigator.onLine;
     this.store.dispatch(setOnlineStatus(isOnline));
   }
+
+  updateDirection(lang: string): void {
+    const isRtl = lang === 'fa';
+    document.documentElement.dir = isRtl ? 'rtl' : 'ltr';
+  }
+
 }

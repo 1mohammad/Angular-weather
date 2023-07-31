@@ -1,15 +1,24 @@
-<div class="flex justify-center">
+<div class="flex justify-center mt-12">
     <form
-		class="rounded-md overflow-hidden border border-white md:w-[450px] w-full mx-4 flex items-center"
+        class="rounded-xl overflow-hidden border border-white border-opacity-50 md:w-[450px] w-full mx-4 flex items-center bg-opacity-20 bg-black backdrop-blur-lg"
         (ngSubmit)="onFetchWeather()"
         [formGroup]="cityForm"
     >
         <input
-			class="bg-transparent py-2 px-3 outline-none flex-1"
+            class="bg-transparent py-3 px-4 outline-none flex-1 w-full"
             type="text"
             formControlName="city"
-            placeholder="Enter city name"
+            [placeholder]="'SEARCH.INPUT_PLACEHOLDER' | translate"
         >
-        <button class="px-3 border-l h-full hover:bg-opacity-100 hover:text-black bg-white bg-opacity-0 transition-all" type="submit">Search</button>
+        <button
+			[disabled]="isLoading$ | async"
+            class="px-3 ltr:border-l rtl:border-r h-full enabled:hover:bg-opacity-100 enabled:hover:text-black bg-white bg-opacity-0 transition-all border-opacity-50 border-white disabled:opacity-20"
+            type="submit"
+        >
+            {{ ((isLoading$ | async) ? 'SEARCH.LOADING' : 'SEARCH.SEARCH_BUTTON') | translate }}
+        </button>
     </form>
 </div>
+<p class="mt-7 text-2xl text-center" [@fadeInOut] *ngIf="!cityForm.get('city')?.value && !(weatherData$ | async) && !(error$ | async)">
+	{{ 'SEARCH.EMPTY_PAGE' | translate }}
+</p>

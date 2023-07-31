@@ -4,13 +4,14 @@ import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { WeatherData } from '@models/weather-data.model';
 import { WeatherCacheService } from './weather-cache.service';
+import { environment } from '@environments/environment';
 
 @Injectable({
 	providedIn: 'root',
 })
 export class WeatherService {
-	private apiKey = '99d1d30f08cdd1b5ccf8e1915152be21';
-	private apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
+	private apiKey = environment.apiKey;
+	private apiUrl = environment.apiUrl;
 
 	constructor(private http: HttpClient, private weatherCacheService: WeatherCacheService) { }
 

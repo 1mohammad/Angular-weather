@@ -1,8 +1,10 @@
 <main class="main-layout flex flex-col justify-between">
-    <app-header></app-header>
-    <div>
+    <nav>
+        <app-header></app-header>
         <app-search></app-search>
+    </nav>
+    <section>
         <ng-content></ng-content>
-    </div>
-	<app-footer></app-footer>
+    </section>
+    <app-footer></app-footer>
 </main>
