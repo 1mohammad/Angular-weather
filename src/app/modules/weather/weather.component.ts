@@ -17,6 +17,6 @@ export class WeatherComponent {
 
   constructor(private store: Store) {
     this.weatherData$ = this.store.select(selectWeatherData).pipe(delay(150));
-    this.error$ = this.store.select(selectWeatherError);
+    this.error$ = this.store.select(selectWeatherError).pipe(delay(150));
   }
 }

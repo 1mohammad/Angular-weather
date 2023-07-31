@@ -1,13 +1,15 @@
 <div class="flex justify-center">
     <app-error
+        [@fadeInOut]
+		icon="assets/img/no-results.png"
         *ngIf="error$ | async as error; else content"
         [errorMessage]="error.error.message"
     ></app-error>
-	<ng-template #content>
-		<app-weather-card
-			[@fadeInOut]
-			*ngIf="weatherData$ | async as weatherData"
-			[data]="weatherData"
-		></app-weather-card>
-	</ng-template>
+    <ng-template #content>
+        <app-weather-card
+            [@fadeInOut]
+            *ngIf="weatherData$ | async as weatherData"
+            [data]="weatherData"
+        ></app-weather-card>
+    </ng-template>
 </div>

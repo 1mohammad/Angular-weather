@@ -16,6 +16,7 @@
 	},
 	"SEARCH": {
 		"SEARCH_BUTTON": "Search",
-		"LOADING": "Loading"
+		"LOADING": "Loading",
+		"EMPTY_PAGE": "Search for a city 👋🏻"
 	}
 }

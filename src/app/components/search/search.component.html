@@ -1,4 +1,4 @@
-<div class="flex justify-center">
+<div class="flex justify-center mt-12">
     <form
         class="rounded-xl overflow-hidden border border-white border-opacity-50 md:w-[450px] w-full mx-4 flex items-center bg-opacity-20 bg-black backdrop-blur-lg"
         (ngSubmit)="onFetchWeather()"
@@ -19,3 +19,6 @@
         </button>
     </form>
 </div>
+<p class="mt-7 text-2xl text-center" [@fadeInOut] *ngIf="!cityForm.get('city')?.value && !(weatherData$ | async) && !(error$ | async)">
+	{{ 'SEARCH.EMPTY_PAGE' | translate }}
+</p>
