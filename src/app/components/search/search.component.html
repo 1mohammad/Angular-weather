@@ -8,11 +8,11 @@
             class="bg-transparent py-3 px-4 outline-none flex-1 w-full"
             type="text"
             formControlName="city"
-            placeholder="Enter city name"
+            [placeholder]="'SEARCH.INPUT_PLACEHOLDER' | translate"
         >
         <button
 			[disabled]="isLoading$ | async"
-            class="px-3 border-l h-full enabled:hover:bg-opacity-100 enabled:hover:text-black bg-white bg-opacity-0 transition-all border-opacity-50 border-white disabled:opacity-20"
+            class="px-3 ltr:border-l rtl:border-r h-full enabled:hover:bg-opacity-100 enabled:hover:text-black bg-white bg-opacity-0 transition-all border-opacity-50 border-white disabled:opacity-20"
             type="submit"
         >
             {{ ((isLoading$ | async) ? 'SEARCH.LOADING' : 'SEARCH.SEARCH_BUTTON') | translate }}

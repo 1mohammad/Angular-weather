@@ -2,19 +2,26 @@
 	{{ 'HEADER.OFFLINE_MESSAGE' | translate }}
 </p>
 <header>
-	<div class="flex pt-4 pb-5 px-5 bg-white bg-opacity-20 justify-between">
+	<div class="flex pt-4 pb-5 px-5 bg-white bg-opacity-20 justify-between items-center">
 		<div class="flex items-end">
 			<img class="me-3 w-[50px] md:w-auto" src="assets/img/logo.png" alt="Weather app">
 			<span class="font-bold text-2xl md:text-3xl">
 				{{ 'HEADER.TITLE' | translate }}
 			</span>
 		</div>
-		<ul class="flex items-center">
-			<li>
-				<a class="rounded px-2 py-1 bg-white bg-opacity-0 hover:bg-opacity-10 transition-all" href="https://github.com/1mohammad/Angular-weather" target="_blank" rel="noopener noreferrer">
-					{{ 'HEADER.MENU.GITHUB' | translate }}
-				</a>
-			</li>
-		</ul>
+		<div class="flex items-center">
+			<ul class="items-center me-3 hidden md:flex">
+				<li>
+					<a class="rounded px-2 py-1 bg-white bg-opacity-0 hover:bg-opacity-10 transition-all" href="https://github.com/1mohammad/Angular-weather" target="_blank" rel="noopener noreferrer">
+						{{ 'HEADER.MENU.GITHUB' | translate }}
+					</a>
+				</li>
+			</ul>
+			<label for="toggle" class="flex items-center rounded-md cursor-pointer rtl:flex-row-reverse">
+				<input id="toggle" type="checkbox" class="hidden peer" [(ngModel)]="isCheckedLang" (change)="onLanguageChange()" >
+				<span class="px-2 py-1 rounded-l-md bg-opacity-80 bg-violet-400 peer-checked:bg-gray-300 peer-checked:bg-opacity-20">EN</span>
+				<span class="px-2 py-1 rounded-r-md bg-opacity-20 bg-gray-300 peer-checked:bg-violet-400 peer-checked:bg-opacity-80">FA</span>
+			</label>
+		</div>
 	</div>
 </header>

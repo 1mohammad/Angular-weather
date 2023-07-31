@@ -17,6 +17,7 @@
 	"SEARCH": {
 		"SEARCH_BUTTON": "Search",
 		"LOADING": "Loading",
-		"EMPTY_PAGE": "Search for a city 👋🏻"
+		"EMPTY_PAGE": "Search for a city 👋🏻",
+		"INPUT_PLACEHOLDER": "Enter city name"
 	}
 }
