@@ -14,5 +14,8 @@
 		"HUMIDITY": "Humidity",
 		"FEELS_LIKE": "Feels like"
 	},
-	"SEARCH_BUTTON": "Search"
+	"SEARCH": {
+		"SEARCH_BUTTON": "Search",
+		"LOADING": "Loading"
+	}
 }

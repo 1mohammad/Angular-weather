@@ -14,5 +14,8 @@
 		"HUMIDITY": "رطوبت",
 		"FEELS_LIKE": "Feels like"
 	},
-	"SEARCH_BUTTON": "جستجو"
+	"SEARCH": {
+		"SEARCH_BUTTON": "جستجو",
+		"LOADING": "بارگذاری"
+	}
 }

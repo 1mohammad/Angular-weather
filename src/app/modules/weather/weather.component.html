@@ -1,7 +1,13 @@
 <div class="flex justify-center">
-    <div *ngIf="loading$ | async; else content">Loading...</div>
+    <app-error
+        *ngIf="error$ | async as error; else content"
+        [errorMessage]="error.error.message"
+    ></app-error>
 	<ng-template #content>
-		<div *ngIf="error$ | async as error">{{ error.error.message }}</div>
-		<app-weather-card *ngIf="weatherData$ | async as weatherData" [data]="weatherData"></app-weather-card>
+		<app-weather-card
+			[@fadeInOut]
+			*ngIf="weatherData$ | async as weatherData"
+			[data]="weatherData"
+		></app-weather-card>
 	</ng-template>
 </div>

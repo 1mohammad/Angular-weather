@@ -12,10 +12,10 @@
         >
         <button
 			[disabled]="isLoading$ | async"
-            class="px-3 border-l h-full hover:bg-opacity-100 hover:text-black bg-white bg-opacity-0 transition-all border-opacity-50 border-white"
+            class="px-3 border-l h-full enabled:hover:bg-opacity-100 enabled:hover:text-black bg-white bg-opacity-0 transition-all border-opacity-50 border-white disabled:opacity-20"
             type="submit"
         >
-            {{ 'SEARCH_BUTTON' | translate }}
+            {{ ((isLoading$ | async) ? 'SEARCH.LOADING' : 'SEARCH.SEARCH_BUTTON') | translate }}
         </button>
     </form>
 </div>
