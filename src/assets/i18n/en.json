@@ -13,5 +13,6 @@
 	"WEATHER": {
 		"HUMIDITY": "Humidity",
 		"FEELS_LIKE": "Feels like"
-	}
+	},
+	"SEARCH_BUTTON": "Search"
 }
