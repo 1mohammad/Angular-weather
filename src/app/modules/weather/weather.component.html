@@ -7,7 +7,7 @@
     ></app-error>
     <ng-template #content>
         <app-weather-card
-            [@fadeInOut]
+            [@fadeIn]
             *ngIf="weatherData$ | async as weatherData"
             [data]="weatherData"
         ></app-weather-card>
