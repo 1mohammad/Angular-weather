@@ -4,3 +4,7 @@
 		@apply w-[1px] md:w-[2px] h-full bg-white absolute inset-x-0 m-auto;
 	}
 }
+
+.ltr-text {
+	direction: ltr;
+}
