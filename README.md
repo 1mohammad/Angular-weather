@@ -23,6 +23,7 @@ Check out the live demo of the Angular Weather App: [Demo](https://angular-nice-
 - Angular: A powerful JavaScript framework for building dynamic web applications.
 - Tailwind CSS: A utility-first CSS framework that makes styling and layout design efficient and flexible.
 - OpenWeatherMap API: Provides weather data for locations worldwide.
+- NgRx: A state management library that enhances data flow and organization in Angular applications
 
 ## Installation and Setup
 
