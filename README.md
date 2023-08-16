@@ -1,6 +1,35 @@
-# Weather
+# Angular Weather App
+This project is an Angular-based weather application that utilizes the OpenWeatherMap API to fetch weather data for different locations. The app is styled using Tailwind CSS, providing a sleek and responsive user interface.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+## Features
+
+- Weather Data: The app fetches weather data from the OpenWeatherMap API based on user-selected locations.
+
+- Location Search: Users can search for weather information in specific locations by entering city names.
+
+- Weather Details: The app displays detailed weather information, including temperature, humidity, and Feels like.
+
+- Responsive Design: Tailwind CSS is used to create a responsive design that adapts to various screen sizes and devices.
+  
+- State Management with NgRx: NgRx is used for efficient state management, ensuring a consistent data flow and improving maintainability.
+
+## Demo
+
+Check out the live demo of the Angular Weather App: [Demo](https://angular-nice-weather.netlify.app)
+
+
+## Technologies Used
+
+- Angular: A powerful JavaScript framework for building dynamic web applications.
+- Tailwind CSS: A utility-first CSS framework that makes styling and layout design efficient and flexible.
+- OpenWeatherMap API: Provides weather data for locations worldwide.
+
+## Installation and Setup
+
+1. Clone this repository
+2. Navigate to the project directory
+3. Install dependencies: npm install
+4. Replace the OpenWeatherMap API key in the environment.ts file with your own API key.
 
 ## Development server
 
